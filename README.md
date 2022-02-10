@@ -39,5 +39,10 @@ To Run the ckt using ngspice:
 1. Go to the FOSSEE folder search for Ngspice and Run it.
 ####  REFERENCE CIRCUIT DIAGRAM
 ![reference circuit diagram](https://github.com/sourabhalagekar/binarytogray/blob/main/bg2.png)
-
+## IMPLERMENTATION
+- The basic circuit for constructing this binary to gray code converter is the transmission gate and inverter. 
+Each Transmission gate  and inverter is a CMOS  based implementation, and is sized uniformly with (W/L)pFET/(W/L)nFET = (20/1u)/(10/1u).
+### Constructing the transmission gate
+The transmission gate logic is used to solve the voltage drop problem of the pass transistor logic. This technique uses the complementary properties of NMOS and PMOS transistors. i.e. NMOS devices passes a strong '0' but a weak '1' while PMOS transistors pass a strong '1' but a weak '0'.The pmos and nmos are connected parallel to each other
+![reference circuit diagram](
 
