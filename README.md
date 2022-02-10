@@ -1,4 +1,4 @@
-# binarytogray
+# BINARY TO GRAY CODE CONVERTER USING TRANSMISSION GATES
 This project deals with conversion of Binary code to gray code
 ## Table of Contents
 - [Introduction](#introduction)
