@@ -172,7 +172,9 @@ plot V(A)+35 V(B)+30 V(C)+25 V(D)+20 V(G0)+15 V(G1)+10 V(G2)+5 V(D)
 
 ### RESULTS:
 
-![reference circuit diagram]
+![reference circuit diagram](https://github.com/sourabhalagekar/binarytogray/blob/main/bg5.png)
+#### WAVEFORM
+![reference circuit diagram](
 
 
 
