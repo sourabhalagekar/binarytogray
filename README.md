@@ -14,7 +14,7 @@ This project deals with conversion of Binary code to gray code
 - .BINARY TO GRAY CODE CONVERTER--
  This code converter combinational circuit is designed to convert binary to Gray code. The input code of code converter is binary and output code of code converter is Gray code.
 ![reference circuit diagram](https://www.zzoomit.com/wp-content/uploads/2018/08/Screenshot-304.png)
-### 2. INSTALLATION OF TOOLS
+## 2. INSTALLATION OF TOOLS
 ***
 #### esim:
 esim is an open-source EDA tool used for circuit design and simulation. Using esim we can draw circuit using Kicad, generate netlist and simulate using Ngspice.
@@ -37,7 +37,7 @@ To Run the ckt using ngspice:
 1. Browse for the ngspice.
 1. If ngspice not present scroll down click on More Apps.
 1. Go to the FOSSEE folder search for Ngspice and Run it.
-####  REFERENCE CIRCUIT DIAGRAM
+##  REFERENCE CIRCUIT DIAGRAM
 ![reference circuit diagram](https://github.com/sourabhalagekar/binarytogray/blob/main/bg2.png)
 ## IMPLERMENTATION
 - The basic circuit for constructing this binary to gray code converter is the transmission gate and inverter. 
@@ -170,13 +170,13 @@ plot V(A)+35 V(B)+30 V(C)+25 V(D)+20 V(G0)+15 V(G1)+10 V(G2)+5 V(D)
 
 .end
 
-### RESULTS:
+## RESULTS:
 
 ![reference circuit diagram](https://github.com/sourabhalagekar/binarytogray/blob/main/bg5.png)
 #### WAVEFORM
 ![reference circuit diagram](https://github.com/sourabhalagekar/binarytogray/blob/main/bg6.png)
 
-### 5. REFERENCES:
+##  REFERENCES:
 ***
 [1] Ravi Kumar Anand “High Performance Binary to Gray Code Converter using Transmission GATE” Int. Journal of Electrical & Electronics Engg.,Vol. 2, Spl. Issue 1 (2015)
 
@@ -187,11 +187,11 @@ plot V(A)+35 V(B)+30 V(C)+25 V(D)+20 V(G0)+15 V(G1)+10 V(G2)+5 V(D)
 [3] https://www.udemy.com/course/vsd-intern-10-bit-dac-design-using-esim-and-sky130/
 
 
-### ACKNOWLEDGEMENT
+## ACKNOWLEDGEMENT
 * [Kunal Ghosh](https://github.com/kunalg123), Co-founder of VLSI System Design (VSD) Corp. Pvt. Ltd 
 * [SAFAL COE ,KARNATAKA](https://www.sfalcoe.com/)
 
-### AUTHOR
+## AUTHOR
 SOURABH D HALAGEKAR , 7th sem B.E (ECE),  CANARA ENGINEERING COLLEGE 
 
 
