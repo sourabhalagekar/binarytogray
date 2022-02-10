@@ -174,9 +174,25 @@ plot V(A)+35 V(B)+30 V(C)+25 V(D)+20 V(G0)+15 V(G1)+10 V(G2)+5 V(D)
 
 ![reference circuit diagram](https://github.com/sourabhalagekar/binarytogray/blob/main/bg5.png)
 #### WAVEFORM
-![reference circuit diagram](
+![reference circuit diagram](https://github.com/sourabhalagekar/binarytogray/blob/main/bg6.png)
+
+### 5. REFERENCES:
+***
+[1] Ravi Kumar Anand “High Performance Binary to Gray Code Converter using Transmission GATE” Int. Journal of Electrical & Electronics Engg.,Vol. 2, Spl. Issue 1 (2015)
 
 
+[2] G. Sujatha and Dr. Narayanam Balaji ” Design and Implementation of combinational circuits in different low power logic styles” IOSR Journal of VLSI and Signal Processing (IOSR-JVSP) Volume 5, Issue 6, Ver. II (Nov -Dec. 2015)
+
+
+[3] https://www.udemy.com/course/vsd-intern-10-bit-dac-design-using-esim-and-sky130/
+
+
+### ACKNOWLEDGEMENT
+* [Kunal Ghosh](https://github.com/kunalg123), Co-founder of VLSI System Design (VSD) Corp. Pvt. Ltd 
+* [SAFAL COE ,KARNATAKA](https://www.sfalcoe.com/)
+
+### AUTHOR
+SOURABH D HALAGEKAR , 7th sem B.E (ECE),  CANARA ENGINEERING COLLEGE 
 
 
 
