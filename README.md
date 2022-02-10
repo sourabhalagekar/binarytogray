@@ -1,5 +1,5 @@
 # binarytogray
 This project deals with conversion of Binary code to gray code
 ## Table of contents
--[INTRODUCTION]
--[
+1 [ INTRODUCTION ]
+2 [ INSTALLATION OF TOOLS ]
