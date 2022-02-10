@@ -53,7 +53,7 @@ Label each and every component and port and check electrical rule checking and g
 
 
  ### IMPLEMENTED CIRCUIT
- ![reference circuit diagram](
+ ![reference circuit diagram](https://github.com/sourabhalagekar/binarytogray/blob/main/bg4.png)
 
 -The netlist generated initially is as shown below:
 
@@ -171,6 +171,9 @@ plot V(A)+35 V(B)+30 V(C)+25 V(D)+20 V(G0)+15 V(G1)+10 V(G2)+5 V(D)
 .end
 
 ### RESULTS:
+
+![reference circuit diagram]
+
 
 
 
