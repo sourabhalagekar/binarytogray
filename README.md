@@ -44,5 +44,140 @@ To Run the ckt using ngspice:
 Each Transmission gate  and inverter is a CMOS  based implementation, and is sized uniformly with (W/L)pFET/(W/L)nFET = (20/1u)/(10/1u).
 ### Constructing the transmission gate
 The transmission gate logic is used to solve the voltage drop problem of the pass transistor logic. This technique uses the complementary properties of NMOS and PMOS transistors. i.e. NMOS devices passes a strong '0' but a weak '1' while PMOS transistors pass a strong '1' but a weak '0'.The pmos and nmos are connected parallel to each other
-![reference circuit diagram](
+![reference circuit diagram](https://github.com/sourabhalagekar/binarytogray/blob/main/bg3.PNG)
+
+
+-There are totally 6 inverters and 3 transmission gates used to construct this binary to gray code converter circuit
+After connecting all the transmission gates and inverters according to the reference circuit we obtain our final circuit
+Label each and every component and port and check electrical rule checking and generate netlist file using spice and make changes in netlist to add sky130 models. 
+
+
+ ### IMPLEMENTED CIRCUIT
+ ![reference circuit diagram](
+
+-The netlist generated initially is as shown below:
+
+* C:\Users\Dell\AppData\Roaming\SPB_16.6\eSim-Workspace\hacakthonbtg\hacakthonbtg.cir
+
+* EESchema Netlist Version 1.1 (Spice format) creation date: 02/10/22 15:54:57
+
+* To exclude a component from the Spice Netlist add [Spice_Netlist_Enabled] user FIELD set to: N
+* To reorder the component spice node sequence add [Spice_Node_Sequence] user FIELD and define sequence: 2,1,0
+
+* Sheet Name: /
+ 
+ 
+M1  /A /B /G0 /vdd mosfet_p	
+
+M10  /G0 /B Net-_M10-Pad3_ GND mosfet_n		
+
+M2  /B /A /G0 /vdd mosfet_p		
+
+M11  /G0 Net-_M10-Pad3_ /B GND mosfet_n	
+
+M3  /vdd /A Net-_M10-Pad3_ /vdd mosfet_p		
+
+M12  Net-_M10-Pad3_ /A GND GND mosfet_n		
+
+M4  /B /C /G1 /vdd mosfet_p		
+
+M13  /G1 /C Net-_M13-Pad3_ GND mosfet_n		
+
+M5  /C /B /G1 /vdd mosfet_p		
+
+M14  /G1 Net-_M13-Pad3_ /C GND mosfet_n		
+
+M6  /vdd /B Net-_M13-Pad3_ /vdd mosfet_p		
+
+M15  Net-_M13-Pad3_ /B GND GND mosfet_n		
+
+M7  /C /D /G2 /vdd mosfet_p		
+
+M16  /G2 /D Net-_M16-Pad3_ GND mosfet_n		
+
+M8  /D /C /G2 /vdd mosfet_p		
+
+M17  /G2 Net-_M16-Pad3_ /D GND mosfet_n		
+
+M9  /vdd /C Net-_M16-Pad3_ /vdd mosfet_p		
+
+M18  Net-_M16-Pad3_ /C GND GND mosfet_n		
+
+U1  /D /B /C /A /G2 /D /G0 /G1 /vdd PORT		
+
+.end
+
+
+**The netlist after making sky130 models syntax changes is as shown below:**
+
+.lib "sky130_fd_pr/models/sky130.lib.spice" tt
+
+xM1  A B G0 vdd sky130_fd_pr__pfet_01v8 w=1 l=0.5		
+
+xM10  G0 B Net-_M10-Pad3_ GND sky130_fd_pr__nfet_01v8 w=1 l=0.5		
+
+xM2  B A G0 vdd sky130_fd_pr__pfet_01v8 w=1 l=0.5		
+
+xM11  G0 Net-_M10-Pad3_ B GND sky130_fd_pr__nfet_01v8 w=1 l=0.5		
+
+xM3  vdd A Net-_M10-Pad3_ vdd sky130_fd_pr__pfet_01v8 w=1 l=0.5		
+
+xM12  Net-_M10-Pad3_ A GND GND sky130_fd_pr__nfet_01v8 w=1 l=0.5	
+
+xM4  B C G1 vdd sky130_fd_pr__pfet_01v8 w=1 l=0.5		
+
+xM13  G1 C Net-_M13-Pad3_ GND sky130_fd_pr__nfet_01v8 w=1 l=0.5		
+
+xM5  C B G1 vdd sky130_fd_pr__pfet_01v8 w=1 l=0.5		
+
+xM14  G1 Net-_M13-Pad3_ C GND sky130_fd_pr__nfet_01v8 w=1 l=0.5		
+
+xM6  vdd B Net-_M13-Pad3_ vdd sky130_fd_pr__pfet_01v8 w=1 l=0.5		
+
+xM15  Net-_M13-Pad3_ B GND GND sky130_fd_pr__nfet_01v8 w=1 l=0.5		
+
+xM7  C D G2 vdd sky130_fd_pr__pfet_01v8 w=1 l=0.5		
+
+xM16  G2 D Net-_M16-Pad3_ GND sky130_fd_pr__nfet_01v8 w=1 l=0.5		
+
+xM8  D C G2 vdd sky130_fd_pr__pfet_01v8 w=1 l=0.5		
+
+xM17  G2 Net-_M16-Pad3_ D GND sky130_fd_pr__nfet_01v8 w=1 l=0.5
+
+xM9  vdd C Net-_M16-Pad3_ vdd sky130_fd_pr__pfet_01v8 w=1 l=0.5		
+
+xM18  Net-_M16-Pad3_ C GND GND sky130_fd_pr__nfet_01v8 w=1 l=0.5		
+		
+vdd vdd GND dc 3.5
+
+vd0 A 0 pulse(0 1.8 0s 0s 0s 5us 10us)
+
+vd1 B 0 pulse(0 1.8 0s 0s 0s 10us 15us)
+
+vd2 C 0 pulse(0 1.8 0s 0s 0s 5us 10us)
+
+vd3 D 0 pulse(0 1.8 0s 0s 0s 5us 10us)
+
+.tran 0.1us 50us
+
+.control
+
+run
+
+plot V(A)+35 V(B)+30 V(C)+25 V(D)+20 V(G0)+15 V(G1)+10 V(G2)+5 V(D)
+
+.endc
+
+.end
+
+### RESULTS:
+
+
+
+
+
+
+
+
+
 
