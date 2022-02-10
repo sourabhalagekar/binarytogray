@@ -37,3 +37,7 @@ To Run the ckt using ngspice:
 1. Browse for the ngspice.
 1. If ngspice not present scroll down click on More Apps.
 1. Go to the FOSSEE folder search for Ngspice and Run it.
+####  REFERENCE CIRCUIT DIAGRAM
+![reference circuit diagram]
+
+
