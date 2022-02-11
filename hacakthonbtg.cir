@@ -1,0 +1,44 @@
+* C:\Users\Dell\AppData\Roaming\SPB_16.6\eSim-Workspace\hacakthonbtg\hacakthonbtg.cir
+
+* EESchema Netlist Version 1.1 (Spice format) creation date: 02/10/22 16:59:45
+
+* To exclude a component from the Spice Netlist add [Spice_Netlist_Enabled] user FIELD set to: N
+* To reorder the component spice node sequence add [Spice_Node_Sequence] user FIELD and define sequence: 2,1,0
+
+* Sheet Name: /
+.lib "sky130_fd_pr/models/sky130.lib.spice" tt
+
+xM1  A B G0 vdd sky130_fd_pr__pfet_01v8 w=1 l=0.5		
+xM10  G0 B Net-_M10-Pad3_ GND sky130_fd_pr__nfet_01v8 w=1 l=0.5		
+xM2  B A G0 vdd sky130_fd_pr__pfet_01v8 w=1 l=0.5		
+xM11  G0 Net-_M10-Pad3_ B GND sky130_fd_pr__nfet_01v8 w=1 l=0.5		
+xM3  vdd A Net-_M10-Pad3_ vdd sky130_fd_pr__pfet_01v8 w=1 l=0.5		
+xM12  Net-_M10-Pad3_ A GND GND sky130_fd_pr__nfet_01v8 w=1 l=0.5	
+xM4  B C G1 vdd sky130_fd_pr__pfet_01v8 w=1 l=0.5		
+xM13  G1 C Net-_M13-Pad3_ GND sky130_fd_pr__nfet_01v8 w=1 l=0.5		
+xM5  C B G1 vdd sky130_fd_pr__pfet_01v8 w=1 l=0.5		
+xM14  G1 Net-_M13-Pad3_ C GND sky130_fd_pr__nfet_01v8 w=1 l=0.5		
+xM6  vdd B Net-_M13-Pad3_ vdd sky130_fd_pr__pfet_01v8 w=1 l=0.5		
+xM15  Net-_M13-Pad3_ B GND GND sky130_fd_pr__nfet_01v8 w=1 l=0.5		
+xM7  C D G2 vdd sky130_fd_pr__pfet_01v8 w=1 l=0.5		
+xM16  G2 D Net-_M16-Pad3_ GND sky130_fd_pr__nfet_01v8 w=1 l=0.5		
+xM8  D C G2 vdd sky130_fd_pr__pfet_01v8 w=1 l=0.5		
+xM17  G2 Net-_M16-Pad3_ D GND sky130_fd_pr__nfet_01v8 w=1 l=0.5		
+xM9  vdd C Net-_M16-Pad3_ vdd sky130_fd_pr__pfet_01v8 w=1 l=0.5		
+xM18  Net-_M16-Pad3_ C GND GND sky130_fd_pr__nfet_01v8 w=1 l=0.5		
+		
+vdd vdd GND dc 3.5
+vd0 A 0 pulse(0 1.8 0s 0s 0s 5us 10us)
+vd1 B 0 pulse(0 1.8 0s 0s 0s 10us 15us)
+vd2 C 0 pulse(0 1.8 0s 0s 0s 5us 10us)
+vd3 D 0 pulse(0 1.8 0s 0s 0s 5us 10us)
+
+.tran 0.1us 50us
+
+.control
+run
+
+plot V(A)+35 V(B)+30 V(C)+25 V(D)+20 V(G0)+15 V(G1)+10 V(G2)+5 V(D)
+.endc
+
+.end
